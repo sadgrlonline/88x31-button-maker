@@ -1,5 +1,7 @@
 # 88x31 Button Maker
 
+**Demo:** [https://sadgrlonline.github.io/88x31-button-maker/](https://sadgrlonline.github.io/88x31-button-maker/)
+
 ## What it is
 
 This is a little generator that can make you a customized 88x31 button! You can change the text alignment, background, text color and border.
