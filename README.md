@@ -1,5 +1,7 @@
 # Fork features
 
+cybergrunge.net fork added some nifty things, might add more later. `domtoimage` is really cool!
+
 * font size selector
 * font selector
 * gradient background colors
