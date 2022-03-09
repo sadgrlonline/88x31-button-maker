@@ -1,29 +1,67 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     var submit = document.getElementById('submit');
+    var gradient = document.getElementById('gradient');
+    
     var input = document.getElementById('input');
+    var input2 = document.getElementById('input2');
+    var input3 = document.getElementById('input3');
+    
     var output = document.getElementById('output');
     var text = document.getElementById('text');
     var retroButton = document.getElementById('retroButton');
     var bgColor = document.getElementById('bg-color');
+    
+    var borderRounded = document.getElementById('borderRounded');
+    
+    var gradColor1 = document.getElementById('bg-color');
+    var gradColor2 = document.getElementById('grad-color2');
+    
     var textColor = document.getElementById('text-color');
+    var textColor2 = document.getElementById('text2-color');
+    var textColor3 = document.getElementById('text3-color');
     var intoImage = document.getElementById('into-image');
     var borderColor = document.getElementById('border-color');
+    var borderStyle = document.getElementById('border-style');
     var borderWidth = document.getElementById('border-width');
     var align = document.getElementById('align');
+    
+    var font1 = document.getElementById('font1');
+    var boldText = document.getElementById('boldText');
+
+
 
     function showPreview() {
-        text.innerText = input.value;
-        output.style.backgroundColor = bgColor.value;
+        text.innerText = input.value;        
+        if(gradient.value=='none'){output.style.background = bgColor.value;}
+			else if(gradient.value=="linearltr"){ output.style.background = "linear-gradient(to right, " + gradColor1.value + "," + gradColor2.value + ")";}
+			else if(gradient.value=="linearvert"){ output.style.background = "linear-gradient(to bottom, " + gradColor1.value + "," + gradColor2.value + ")";}
+			else if(gradient.value=="lineardiag"){ output.style.background = "linear-gradient(to bottom right, " + gradColor1.value + "," + gradColor2.value + ")";}
+			else if(gradient.value=="radial"){ output.style.background = "radial-gradient(" + gradColor1.value + "," + gradColor2.value + ")";}
+			
+        if(borderRounded.checked){output.style.borderRadius = "25px";}
+        if(!borderRounded.checked){output.style.borderRadius = "0px";}
+			
+			
+        if(boldText.checked){text.style.fontSize = "12px";}else{text.style.fontSize = "9px";}
+			
+			
         output.style.color = textColor.value;
-        output.style.border = borderWidth.value + 'px solid ' + borderColor.value;
+        
+        output.style.border = borderWidth.value + 'px ' + borderColor.value + " " + borderStyle.value;
         var ele = document.getElementsByName('align');
         for (i = 0; i < ele.length; i++) {
             if (ele[i].checked) {
                 text.style.textAlign = ele[i].value;
             }
-
         }
+
+        text.style.fontFamily = font1.value;
+        text.style.fontFace = font1.value;
+        
+
+
+
 
         if (retroButton.checked) {
             //alert("checked");
@@ -36,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             // alert("You didn't check it! Let me check it for you.");
         }
+        
+        
         document.getElementById('upload').addEventListener('change', readURL, true);
 
         function readURL() {
@@ -65,7 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return {};
         }
     }
-    setInterval(showPreview, 1000);
+    
+    setInterval(showPreview, 600);
 
     function displayRadioValue() {
         var ele = document.getElementsByName('align');
