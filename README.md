@@ -1,3 +1,19 @@
+# Fork features
+
+live demo:
+https://cybergrunge.net/resources/buttonmaker.html
+
+cybergrunge.net fork added some nifty things, might add more later. `domtoimage` is really cool!
+
+* font size selector
+* font selector
+* gradient background colors
+* gradient style selector
+* round borders option
+* border style selector
+
+
+
 # 88x31 Button Maker
 
 **Demo:** [https://sadgrlonline.github.io/88x31-button-maker/](https://sadgrlonline.github.io/88x31-button-maker/)

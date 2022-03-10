@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: silkscreen;
     src: url(https://sadgrl.online/fonts/slkscr.woff);
@@ -7,6 +8,7 @@ html,
 body {
     padding: 0;
     margin: 0;
+    line-height:1;
     font-family: sans-serif;
 }
 
@@ -17,13 +19,11 @@ body {
 }
 
 #output {
-    font-family: silkscreen;
     width: 88px;
     height: 31px;
     margin-top: 10px;
     font-size: 8px;
-    line-height: 8px;
-    padding-top: 3px;
+    line-height:1;
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
@@ -87,13 +87,15 @@ input[type="color"]::-webkit-color-swatch {
     margin-right: 55px;
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    border-left:2px solid;
+    padding-left:3px;
+    margin-bottom:5px;
 }
 
 textarea {
     border-color: 1px solid var(--accent-4);
     font-family: Space Grotesk;
-    min-height: 50px;
+    min-height: 35px;
 }
 
 input[type="file"i] {
@@ -108,4 +110,27 @@ input[type="file"] {
 #results {
     width: 88px;
     height: 31px;
+}
+
+select {
+	border: 1px solid black;
+	border-radius:0px;
+	background:#eee;
+}
+
+button {
+	border: 1px solid black;
+	border-radius:0px;
+	background:#eee;
+}
+
+
+button:hover {
+	background:#f3f3f3;
+	font-weight:bold;
+}
+	
+#textsection {
+	border: 1px solid black;
+	padding: 5px;
 }

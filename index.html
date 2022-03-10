@@ -12,38 +12,93 @@
     <div class="container">
         <h1>88x31 Button Maker</h1>
         <p><strong>Tip:</strong> Copying and pasting <a href="https://emojipedia.org/" TARGET="_blank">emojis</a>
-            works)</p>
+            works</p>
         <div class="left"><strong>Preview:</strong><br><br>
             <div id="output">
                 <p id="text"></p>
-            </div><br><br>
+            </div><br>
         </div>
         <div class="contain">
-            <div class="option"><strong>Enter your text<br></strong><br>
-                <textarea id="input" type="text" autocomplete="off" value="%{text}"></textarea>
+			
+			
+			
+			
+			<div id="textsection">
+			
+				<div class="option"><strong>Text 1<br></strong><br>
+					<textarea width="300" style="resize:none;width:250px" id="input" type="text" autocomplete="off" value=""></textarea>
+				</div>
+				<div class="option"><strong>Text-align:</strong><br><br>
+					<div><label for="left">Left</label><input type="radio" id="align" name="align" value="left" checked>
+						 <label for="center">Center</label><input type="radio" id="align" name="align" value="center">
+						 <label for="right">Right</label><input type="radio" id="align" name="align" value="right">
+					</div>
+				</div>
+				<div class="option"><strong>Font:</strong>
+					<select id="font1">
+						<option value="silkscreen">silkscreen</option>
+						<option value="mono">mono</option>
+						<option value="arial">arial</option>
+					</select>
+					<strong>Big Text:</strong>
+					<input type="checkbox" id="boldText" name="boldText">
+				</div>
             </div>
-            <strong>Premade Styles:</strong>
-            <input type="checkbox" id="retroButton" name="retroButton">
-            <label for="retroButton">retro mode</label>
-            <div class="option"><strong>Upload</strong>
+            <br>
+            <div class="option"><strong>Upload background image</strong>
                 <input type="file" name="file" id="upload" class="inputfile" title="aa" />
             </div>
-            <div class="option"><strong>Background color:</strong><input id="bg-color" type="color" value="#ffffff"></input></div>
+            
+            <div class="option"><strong>Gradient:</strong>
+                <select id="gradient">
+					<option value="none">none</option>
+					<option value="linearltr">left-right</option>
+					<option value="linearvert">up-down</option>
+					<option value="lineardiag">diagonal</option>
+					<option value="radial">radial</option>
+                </select>
+            </div>
+            
+            <div class="option"><strong>Background:</strong>
+            <input id="bg-color" type="color" value="#ffffff"></input>
+            <input id="grad-color2" type="color" value="#ffffff"></input></div>
+            
+            
+				
+            
+            
+            
             <div class="option"><strong>Text color:</strong>
                 <input id="text-color" type="color" value="#000000"></input>
             </div>
             <div class="option"><strong>Border color:</strong>
                 <input id="border-color" type="color" value="#000000"></input>
             </div>
-            <div class="option"><strong>Border thickness (px):</strong>
-                <input id="border-width" value="1" max="8"></input>
+            <div class="option"><strong>Border Style:</strong>
+                <select id="border-style">
+					<option value="solid">solid</option>
+					<option value="outset">outset</option>
+					<option value="inset">inset</option>
+					<option value="ridge">ridge</option>
+					<option value="groove">groove</option>
+					<option value="dotted">dotted</option>
+					<option value="dashed">dashed</option>
+					<option value="double">double</option>
+                </select>
             </div>
-            <div class="option"><strong>Text-align:</strong><br><br>
-                <div><label for="left">Left</label><input type="radio" id="align" name="align" value="left" checked>
-                    <label for="center">Center</label><input type="radio" id="align" name="align" value="center">
-                    <label for="right">Right</label><input type="radio" id="align" name="align" value="right">
-                </div>
+            
+            <div class="option"><strong>Rounded Border</strong>
+				<input type="checkbox" id="borderRounded" name="borderRounded">
             </div>
+            
+            <div class="option"><strong>Border thickness:</strong>
+                <input style="width:45px" id="border-width" value="1" max="9"></input>
+            </div>
+            
+            <strong>Premade Styles:</strong>
+            <input type="checkbox" id="retroButton" name="retroButton">
+            <label for="retroButton">retro mode</label>
+            
             <div><button id="into-image">Make into image</button><br><br>
                 <div id="results"></div><br><br>
                 <p>When you're happy with how it looks, click 'make into image' and right-click > 'save as' to save your creation!</p>
