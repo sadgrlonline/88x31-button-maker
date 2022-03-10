@@ -1,6 +1,7 @@
 # Fork features
 
-![a preview image](buttonmaker.png)
+live demo:
+https://cybergrunge.net/resources/buttonmaker.html
 
 cybergrunge.net fork added some nifty things, might add more later. `domtoimage` is really cool!
 
